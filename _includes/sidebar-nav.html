@@ -1,0 +1,64 @@
+<nav class="sidebar-nav">
+  <ul class="nav-list">
+    <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Bio</a></li>
+    <li><a href="/research/" {% if page.url contains "/research" %}class="active"{% endif %}>Research</a></li>
+    <li><a href="/teaching/" {% if page.url contains "/teaching" %}class="active"{% endif %}>Teaching</a></li>
+    <li><a href="/media/" {% if page.url contains "/media" %}class="active"{% endif %}>Media & Press</a></li>
+    <li><a href="/interests/" {% if page.url contains "/interests" %}class="active"{% endif %}>Other Interests</a></li>
+  </ul>
+</nav>
+
+<style>
+.sidebar-nav {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 8px;
+}
+
+.nav-list a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .sidebar-nav {
+    margin-bottom: 10px;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .nav-list li {
+    margin-bottom: 0;
+  }
+  
+  .nav-list a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+</style>
