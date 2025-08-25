@@ -9,11 +9,72 @@
 
 <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
-  {% include bio.html %}
+<div class="page-container">
+  
+  <!-- Left Sidebar with Bio and Navigation -->
+  <aside class="sidebar-left">
+    {% include bio.html %}
+    {% include sidebar-nav.html %}
+  </aside>
 
-  {{ content }}
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
 
-  {% include scripts.html %}
+</div>
+
+{% include scripts.html %}
+
+<style>
+.page-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "sidebar main";
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sidebar-left {
+  grid-area: sidebar;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.main-content {
+  grid-area: main;
+  min-width: 0; /* Prevents content from overflowing */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .page-container {
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "sidebar"
+      "main";
+    gap: 15px;
+  }
+  
+  .sidebar-left {
+    position: relative;
+    top: auto;
+  }
+}
+</style>
+
 </body>
 
 </html>
