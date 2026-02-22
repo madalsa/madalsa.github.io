@@ -1,27 +1,21 @@
 # Site Settings
 locale                   : "en-US"
-title                    : "Madalsa Singh"
+title                    : "Jack | Drummer"
 title_separator          : "-"
-name                     : "Madalsa Singh"
+name                     : "Jack"
 
-
-#url                      : "https://madalsa.org"
-#baseurl                  : "/"
-#repository               : "kuriwaki/kuriwaki.github.io"
-#logo                     : "/favicon.ico"
-#github                   : [metadata]
 
 # Analytics
-analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          : "UA-166018803-1"
-    anonymize_ip         : # true, false (default)
+# analytics:
+#   provider               : "google-gtag"
+#   google:
+#     tracking_id          : ""
+#     anonymize_ip         : true
 
 
 sass:
   sass_dir: _sass
-  style: compact # possible values: nested expanded compact compressed
+  style: compact
 
 theme: jekyll-theme-minimal
 
@@ -54,8 +48,8 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
+  - /docs
+  - /test
 keep_files:
   - .git
   - .svn
@@ -86,7 +80,7 @@ kramdown:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
 
 # Plugins (previously gems:)

@@ -7,18 +7,10 @@ details[open] {
   padding-bottom: 1em;
   padding-top: 0.1em;
   font-style: italic;
-  border-left: 0.25em solid $primary-color;
-  background-color: #f6f7f8;
-
-  cite {
-    font-style: italic;
-
-    &:before {
-      padding-right: 5px;
-    }
-  }
+  border-left: 3px solid var(--accent-red, #c0392b);
+  background-color: var(--bg-card, #1a1a1a);
+  color: var(--text-secondary, #999);
 }
-
 
 img {
     max-width: 100%;
@@ -30,7 +22,6 @@ img {
   margin-left: 40px;
   margin-right: 40px;
 }
-
 
 h4 {
   margin: 15px 0 10px;

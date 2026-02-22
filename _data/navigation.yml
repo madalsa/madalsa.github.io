@@ -1,11 +1,11 @@
 main:
-  - title: "<b>Research</b>"
-    url: /#pubs
-  - title: "<b>Teaching</b>"
-    url: /#teaching
-  - title: "<b>R Media</b>"
-    url: /#media
-  - title: "<b>Datasets</b>"
-    url: /#datasets
-  - title: "<b>C.V.</b>"
-    url: /cv/madalsa_cv.pdf
+  - title: "<b>About</b>"
+    url: /#about
+  - title: "<b>Top 5</b>"
+    url: /#top5
+  - title: "<b>Videos</b>"
+    url: /#videos
+  - title: "<b>Lessons</b>"
+    url: /#lessons
+  - title: "<b>Contact</b>"
+    url: /#contact
